@@ -25,11 +25,16 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test:integration": "jest -c integration/jest.config.js --runInBand",
+    "test:integration": "jest -c jest-browser-tests.config.js",
+    "ci:integration": "jest -c jest-browser-tests.config.js --runInBand",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "env": "jest",
+    "globals": {
+      "page": true
+    }
   },
   "browserslist": {
     "production": [

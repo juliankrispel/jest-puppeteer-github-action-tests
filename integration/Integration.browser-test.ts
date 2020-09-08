@@ -1,5 +1,5 @@
 
-describe('Google', () => {
+describe('App', () => {
   beforeAll(async () => {
     await page.goto('http://localhost:3000')
   })
